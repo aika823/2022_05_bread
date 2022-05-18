@@ -18,9 +18,10 @@ INSTALLED_APPS = [
     'django.contrib.humanize',
     'django.contrib.sites',
     # Custom Apps
-    'app_manage',
-    'app_api',
     'app_main',
+    'app_product',
+    'app_api',
+    'app_manage',
 
     # Django Allauth
     'allauth',

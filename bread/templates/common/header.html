@@ -1,0 +1,75 @@
+<header>
+	<!-- <div class="nav-top">
+		<div class="max-1200">
+			<div class="nav-wrap">
+				<div class="top-left">
+					<div class="sns-wrap">
+						<a href="/">
+							<img src="/static/images/insta.png" alt="">
+						</a>
+						<a href="/">
+							<img src="/static/images/blog.png" alt="">
+						</a>
+					</div>
+				</div>
+				<div class="top-right">
+					<a href="/고객센터/상담사지원">상담사 지원</a>
+					<a href="/고객센터/1:1문의">1:1 문의</a>
+					{% if user.is_authenticated %}
+					<a href="/mypage">마이페이지 ({{user.email}})</a>
+					<a href="{% url 'account_logout'%}">로그아웃</a>
+					{% else %}
+					<a href="/sign_in">로그인</a>
+					<a href="/sign_up">회원가입</a>
+					{% endif %}
+				</div>
+			</div>
+		</div>
+	</div> -->
+	<div class="gnb">
+		<div class="max-1200">
+			<div class="gnb-wrap">
+				<span class="open-sidenav" onclick="openNav()">&#9776;</span>
+				<!-- <div class="gnb-menu">
+					<a href="/고객센터/이용안내">이용안내</a>
+					<div class="line"></div>
+					<a href="/상담/타로">타로상담</a>
+					<div class="line"></div>
+					<a href="/상담/신점">신점상담</a>
+					<div class="line"></div>
+					<a href="/상담/사주">사주상담</a>
+				</div> -->
+				<div class="logo" onclick="location.href='/'">
+					<picture>
+						<source media="(min-width:900px)" srcset="/static/images/logo/logo_white.png">
+						<img src="/static/images/logo/logo_green.png" alt="">
+					</picture>
+				</div>
+				<div class="gnb-menu">
+					<!-- <a href="/고객센터/이용안내">상담요금</a>
+					<div class="line"></div>
+					<a href="">얘약시간확인</a>
+					<div class="line"></div>
+					<a href="/상담후기">상담후기</a>
+					<div class="line"></div>
+					<a href="/고객센터/코인충전">코인충전</a> -->
+          {% if user.is_authenticated %}
+					<a href="/mypage">마이페이지 ({{user.email}})</a>
+          <div class="line"></div>
+					<a href="{% url 'account_logout'%}">로그아웃</a>
+          <div class="line"></div>
+					{% else %}
+					<a href="/sign_in">로그인</a>
+          <div class="line"></div>
+					<a href="/sign_up">회원가입</a>
+          <div class="line"></div>
+          {% endif %}
+          <a href="/고객센터">고객센터</a>
+				</div>
+				<a href="" class="mobile-call">
+					<img src="/static/images/call_mobile.png" alt="">
+				</a>
+			</div>
+		</div>
+	</div>
+</header>

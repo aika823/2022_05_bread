@@ -1,6 +1,6 @@
 from this import d
 from django.db import models
-from api.functions_db import get_values
+from app_api.functions_db import get_values
 from django.contrib.auth.models import AbstractUser
 
 # Override Django Auth User
