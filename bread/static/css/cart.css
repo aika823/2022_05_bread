@@ -1,0 +1,75 @@
+/* section.cart */
+section.cart {
+  padding: 120px 20px 170px;
+  box-sizing: border-box;
+}
+section.cart h3 {
+  font-size: 23px;
+  margin-bottom: 25px;
+}
+section.cart .cart-quantity {
+  border: 2px solid #FFEC93;
+  padding: 18px;
+  font-size: 20px;
+  font-weight: 700;
+  text-align: center;
+}
+section.cart .cart-table {
+  border-top: 2px solid #FFEC93;
+  margin: 17px auto 34px;
+}
+section.cart .cart-table .table-header,
+section.cart .cart-table .table-row {
+  border-bottom: 1px solid #E5E5E5;
+  display: grid;
+  grid-template-columns: 1fr 500px 1fr 1fr 1fr 1fr;
+  align-items: center;
+  justify-items: center;
+}
+section.cart .cart-table .table-header p,
+section.cart .cart-table .table-row p {
+  padding: 17px 0;
+  box-sizing: border-box;
+  width: 100%;
+  text-align: center;
+  color: #000000CC;
+}
+section.cart .cart-table .table-header p {
+  font-weight: 700;
+}
+section.cart .cart-table .table-row.nothing {
+  grid-template-columns: 100%;
+  color: #00000080;
+}
+section.cart .cart-table .table-row p a {
+  color: #000000CC;
+}
+
+section.cart .btn-group {
+  max-width: 625px;
+  margin: 0 auto; 
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  align-items: center;
+  justify-items: center;
+  gap: 17px;
+}
+section.cart .btn-group form {
+  width: 100%;
+}
+section.cart .btn-group button {
+  cursor: pointer;
+  width: 100%;
+  border: 1px solid #C4C4C4;
+  text-align: center;
+  font-size: 16px;
+  display: inline-block;
+  padding: 17px 0;
+  box-sizing: border-box;
+  background-color: #fff;
+  color: #000000CC;
+}
+section.cart .btn-group button.btn-submit {
+  background-color: #484848;
+  color: #fff;
+}

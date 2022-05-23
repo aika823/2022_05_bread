@@ -9,4 +9,7 @@ app_name = "app_main"
 
 urlpatterns = [
     path('', views.index), 
+    path('signup', views.signup),
+    path('signin', views.signin),
+    path('find_info', views.find_info),
 ]

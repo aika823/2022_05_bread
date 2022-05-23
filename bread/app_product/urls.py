@@ -11,4 +11,5 @@ urlpatterns = [
     path('', views.product_list), 
     path('category', views.product_category), 
     path('detail', views.product_detail), 
+    path('cart', views.cart), 
 ]

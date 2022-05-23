@@ -1,0 +1,40 @@
+{% extends 'common/main_base.html' %}
+
+{% block extraheads %}
+<link rel="stylesheet" href="/static/css/product.css">
+{% endblock extraheads %}
+
+{% block content %}
+
+{% include "common/sub_banner.html" %}
+
+{% include "product_category.html" %}
+
+<!-- section.product-list -->
+<section class="product-list">
+  <div class="max-1200">
+    <div class="list-wrap">
+
+      <!-- 반복문 상품 리스트 start -->
+      <div class="img-wrap" onclick="location.href=''" style="background-image: url('/static/images/product-sample1.png');"></div>
+      <div class="img-wrap" onclick="location.href=''" style="background-image: url('/static/images/product-sample2.png');"></div>
+      <div class="img-wrap" onclick="location.href=''" style="background-image: url('/static/images/product-sample3.png');"></div>
+      <div class="img-wrap" onclick="location.href=''" style="background-image: url('/static/images/product-sample4.png');"></div>
+      <div class="img-wrap" onclick="location.href=''" style="background-image: url('/static/images/product-sample2.png');"></div>
+      <div class="img-wrap" onclick="location.href=''" style="background-image: url('/static/images/product-sample1.png');"></div>
+      <div class="img-wrap" onclick="location.href=''" style="background-image: url('/static/images/product-sample3.png');"></div>
+      <div class="img-wrap" onclick="location.href=''" style="background-image: url('/static/images/product-sample1.png');"></div>
+      <div class="img-wrap" onclick="location.href=''" style="background-image: url('/static/images/product-sample4.png');"></div>
+      <div class="img-wrap" onclick="location.href=''" style="background-image: url('/static/images/product-sample2.png');"></div>
+      <div class="img-wrap" onclick="location.href=''" style="background-image: url('/static/images/product-sample4.png');"></div>
+      <div class="img-wrap" onclick="location.href=''" style="background-image: url('/static/images/product-sample3.png');"></div>
+      <!-- 반복문 상품 리스트 end -->
+
+    </div>
+  </div>
+</section>
+
+{% endblock content %}
+
+{% block extrascripts %}
+{% endblock %}

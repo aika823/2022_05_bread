@@ -1,0 +1,78 @@
+/* section.signin */
+section.signin {
+  padding: 120px 20px 150px;
+  box-sizing: border-box;
+}
+section.signin h3 {
+  font-size: 23px;
+  margin-bottom: 15px;
+}
+section.signin .signin-wrap .signin-grid {
+  border: 1px solid #E5E5E5;
+  border-top: 2px solid #FFEC93;
+  padding: 55px 70px 70px;
+  box-sizing: border-box;
+  display: grid;
+  grid-template-columns: 1fr 2px 1fr;
+  justify-items: center;
+  gap: 80px;
+}
+section.signin .signin-wrap .signin-grid form {
+  width: 100%;
+}
+section.signin .signin-wrap .signin-grid .line {
+  width: 2px;
+  height: 100%;
+  background-color: #E5E5E5;
+}
+section.signin .signin-wrap .signin-grid .signin-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  gap: 15px;
+}
+section.signin .signin-wrap .signin-grid .signin-form h3 {
+  margin: 0;
+}
+section.signin .signin-wrap .signin-grid .signin-form input {
+  padding: 20px;
+  border: 1px solid #E5E5E5;
+  font-size: 16px;
+  width: 100%;
+  margin-bottom: 10px;
+  box-sizing: border-box;
+}
+section.signin .signin-wrap .signin-grid .signin-form a,
+section.signin .signin-wrap .signin-grid .signin-form button {
+  border: 1px solid #C4C4C4;
+  box-sizing: border-box;
+  padding: 17px;
+  text-align: center;
+  cursor: pointer;
+  font-size: 18px;
+  display: inline-block;
+}
+section.signin .signin-wrap .signin-grid .signin-form input::placeholder {
+  color: #00000080;
+}
+section.signin .signin-wrap .signin-grid .signin-form p {
+  color: #00000080;
+  font-size: 15px;
+}
+section.signin .signin-wrap .signin-grid .signin-form .find-info {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 10px;
+}
+section.signin .signin-wrap .signin-grid .signin-form button.btn-submit {
+  background-color: #484848;
+  color: #fff;
+  border: 1px solid #484848;
+  font-size: 18px;
+  font-weight: 700;
+}
+section.signin .signin-wrap .signin-grid .signin-form.find-id {
+  justify-content: flex-start;
+}

@@ -1,0 +1,64 @@
+{% extends 'common/main_base.html' %}
+
+{% block extraheads %}
+<link rel="stylesheet" href="/static/css/signin.css">
+{% endblock extraheads %}
+
+{% block content %}
+
+{% include "common/sub_banner.html" %}
+
+<!-- section.signin -->
+<section class="signin">
+  <div class="max-1200">
+
+    <div class="signin-wrap">
+      <h3>로그인</h3>
+      <div class="signin-grid">
+        <form action="">
+          <div class="signin-form">
+            <h3>회원 로그인</h3>
+            <p>
+              가입하신 아이디와 비밀번호를 입력해주세요.
+              <br>비밀번호는 대소문자를 구분합니다.
+            </p>
+            <div class="form-wrap">
+              <div class="form-row">
+                <input type="text" placeholder="MEMBER ID" required/>
+              </div>
+              <div class="form-row">
+                <input type="text" placeholder="MEMBER ID" required/>
+              </div>
+            </div>
+            <button class="btn-submit">로그인</button>
+          </div>
+        </form>
+
+        <div class="line"></div>
+
+        <div class="signin-form">
+          <h3>회원 로그인</h3>
+          <p>
+            아직 회원이 아니신가요?
+            <br>회원가입을 하시면 다양한 혜택을 편리하게 이용하실 수 있습니다.
+          </p>
+          <a href="/signup">회원가입</a>
+          <p>
+            아이디 혹은 비밀번호를 잊으셨나요?
+            <br>간단한 정보를 입력 후 잃어버린 정보를 찾으실 수 있습니다.
+          </p>
+          <div class="find-info">
+            <a href="/find_info">아이디</a>
+            <a href="/find_info">비밀번호</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+{% endblock content %}
+
+{% block extrascripts %}
+{% endblock %}

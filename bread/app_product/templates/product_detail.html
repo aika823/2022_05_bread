@@ -1,0 +1,110 @@
+{% extends 'common/main_base.html' %}
+
+{% block extraheads %}
+<link rel="stylesheet" href="/static/css/product.css">
+{% endblock extraheads %}
+
+{% block content %}
+
+{% include "common/sub_banner.html" %}
+
+{% include "product_category.html" %}
+
+<!-- section.product-detail -->
+<section class="product-detail">
+  <div class="max-1200">
+    <div class="detail-wrap">
+      <div class="detail-img">
+        <!-- <div class="image-wrap" style="background-image: url('/static/images/detail-sample.png');"></div> -->
+        <img src="/static/images/detail-sample.png" alt="상품 이미지">
+      </div>
+      <div class="detail-text">
+        <h3>딸기가득 (음료베이스)</h3>
+        <div class="detail-info">
+          <p class="description">생딸기 본연의 새콤달콤 풍미 가득
+            제철 딸기를 급속 냉동하여 신선한 맛과 영양이 풍부한 자연 그대로의
+            딸기 과육 본연의 맛을 살릴 수 있는 딸기 만능 음료 베이스 시럽입니다.
+            딸기(이집트산)41% 함유
+            (딸기 올인원 음료 베이스, 라떼, 에이드, 요거트, 스무디등)</p>
+          <div class="info-row">
+            <p class="row-name">중량</p>
+            <p class="row-content">1.2kg (1개)</p>
+          </div>
+          <div class="info-row">
+            <p class="row-name">출고(포장)단위</p>
+            <p class="row-content">1ea</p>
+          </div>
+          <div class="info-row">
+            <p class="row-name">보관방법</p>
+            <p class="row-content">실온 보관, 개봉 후 냉장 보관</p>
+          </div>
+          <div class="info-row">
+            <p class="row-name">유통기한</p>
+            <p class="row-content">제조일로부터 18개월</p>
+          </div>
+        </div>
+        <div class="total-price">
+          <p class="row-name">총 상품 금액</p>
+          <p class="row-content">18,000원</p>
+        </div>
+        <div class="detail-form">
+          <div class="count">
+            <span class="minus">-</span>
+            <input id="Counter" type="text" value="1"/>
+            <span class="plus">+</span>
+          </div>
+          <div class="btn-group">
+            <!-- order.html로 전달 -->
+            <form action="">
+              <input type="text" style="visibility:hidden; position: absolute;">
+              <input class="num" value="1" type="text" value="{{ product.id }}" style="visibility:hidden; position: absolute;">
+              <button class="btn-pay">구매하기</button>
+            </form>
+            <!-- cart.html로 전달 -->
+            <form action="">
+              <input type="text" style="visibility:hidden; position: absolute;">
+              <input class="num" value="1" type="text" value="{{ product.id }}" style="visibility:hidden; position: absolute;">
+              <button class="btn-cart">장바구니</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- section.product-info-image -->
+<section class="product-info-image">
+  <div class="max-1200">
+    <div class="image-wrap">
+      <img src="/static/images/detail-img-sample.png" alt="">
+    </div>
+  </div>
+</section>
+
+{% endblock content %}
+
+{% block extrascripts %}
+<script>
+  $(document).ready(function() {
+			$('.minus').click(function () {
+				var $input = $(this).parent().find('#Counter');
+				var count = parseInt($input.val()) - 1;
+				count = count < 1 ? 1 : count;
+				$input.val(count);
+        $('.num').val(count);
+				$input.change();
+				return false;
+			});
+			$('.plus').click(function () {
+				var $input = $(this).parent().find('#Counter');
+        var count = parseInt($input.val()) + 1;
+				$input.val(count);
+        $('.num').val(count);
+				$input.change();
+				return false;
+			});
+		});
+</script>
+{% endblock %}

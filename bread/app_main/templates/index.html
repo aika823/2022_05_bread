@@ -1,5 +1,140 @@
 {% extends 'common/main_base.html' %}
 
 {% block content %}
-test
+<!-- section.main-banner -->
+<section class="main-banner">
+  <div class="slide-banner">
+    <img src="/static/images/banner-sample1.png" alt="김동언과자점 메인 이미지">
+    <img src="/static/images/banner-sample1.png" alt="김동언과자점 메인 이미지">
+    <img src="/static/images/banner-sample1.png" alt="김동언과자점 메인 이미지">
+  </div>
+</section>
+
+<!-- section.hot-product -->
+<section class="hot-product">
+  <div class="max-1200">
+    <div class="hot-wrap">
+
+      <!-- 반복문 4개 start -->
+      <div class="hot-card" onclick="location.href=''">
+        <div class="img-wrap">
+          <img src="/static/images/hot-sample1.png" alt="김동언과자점 메인상품">
+        </div>
+        <div class="text-wrap">
+          <p class="product-name">얼그레이쉬폰 라운드 케이크</p>
+          <p class="product-name">(6EA/PACK)</p>
+          <div class="line"></div>
+          <div class="price-wrap">
+            <p class="product-price">1pc</p>
+            <p class="product-price">25,500원</p>
+          </div>
+        </div>
+      </div>
+      <div class="hot-card" onclick="location.href=''">
+        <div class="img-wrap">
+          <img src="/static/images/hot-sample2.png" alt="김동언과자점 메인상품">
+        </div>
+        <div class="text-wrap">
+          <p class="product-name">얼그레이쉬폰 라운드 케이크</p>
+          <p class="product-name">(6EA/PACK)</p>
+          <div class="line"></div>
+          <div class="price-wrap">
+            <p class="product-price">1pc</p>
+            <p class="product-price">25,500원</p>
+          </div>
+        </div>
+      </div>
+      <div class="hot-card" onclick="location.href=''">
+        <div class="img-wrap">
+          <img src="/static/images/hot-sample3.png" alt="김동언과자점 메인상품">
+        </div>
+        <div class="text-wrap">
+          <p class="product-name">얼그레이쉬폰 라운드 케이크</p>
+          <p class="product-name">(6EA/PACK)</p>
+          <div class="line"></div>
+          <div class="price-wrap">
+            <p class="product-price">1pc</p>
+            <p class="product-price">25,500원</p>
+          </div>
+        </div>
+      </div>
+      <div class="hot-card" onclick="location.href=''">
+        <div class="img-wrap">
+          <img src="/static/images/hot-sample4.png" alt="김동언과자점 메인상품">
+        </div>
+        <div class="text-wrap">
+          <p class="product-name">얼그레이쉬폰 라운드 케이크</p>
+          <p class="product-name">(6EA/PACK)</p>
+          <div class="line"></div>
+          <div class="price-wrap">
+            <p class="product-price">1pc</p>
+            <p class="product-price">25,500원</p>
+          </div>
+        </div>
+      </div>
+      <!-- 반복문 end -->
+
+    </div>
+  </div>
+</section>
+
+<!-- section.middle-banner -->
+<section class="middle-banner">
+  <div class="overlay"></div>
+  <div class="middle-wrap">
+    <h2>WELL FOOD ONE BAKERY</h2>
+    <h1><span>빵</span>으로 <span>고객</span>과 <span>가족</span>의 <span>행복</span>을 빚는다</h1>
+  </div>
+</section>
+
+
+<!-- section.recommend -->
+<section class="recommend">
+  <div class="max-1200">
+    <div class="recommend-wrap">
+
+      <!-- 반복문 12개 추천 상품 start -->
+      <div class="img-wrap" onclick="location.href=''" style="background-image: url('/static/images/product-sample1.png');"></div>
+      <div class="img-wrap" onclick="location.href=''" style="background-image: url('/static/images/product-sample2.png');"></div>
+      <div class="img-wrap" onclick="location.href=''" style="background-image: url('/static/images/product-sample3.png');"></div>
+      <div class="img-wrap" onclick="location.href=''" style="background-image: url('/static/images/product-sample4.png');"></div>
+      <div class="img-wrap" onclick="location.href=''" style="background-image: url('/static/images/product-sample2.png');"></div>
+      <div class="img-wrap" onclick="location.href=''" style="background-image: url('/static/images/product-sample1.png');"></div>
+      <div class="img-wrap" onclick="location.href=''" style="background-image: url('/static/images/product-sample3.png');"></div>
+      <div class="img-wrap" onclick="location.href=''" style="background-image: url('/static/images/product-sample1.png');"></div>
+      <div class="img-wrap" onclick="location.href=''" style="background-image: url('/static/images/product-sample4.png');"></div>
+      <div class="img-wrap" onclick="location.href=''" style="background-image: url('/static/images/product-sample2.png');"></div>
+      <div class="img-wrap" onclick="location.href=''" style="background-image: url('/static/images/product-sample4.png');"></div>
+      <div class="img-wrap" onclick="location.href=''" style="background-image: url('/static/images/product-sample3.png');"></div>
+      <!-- 반복문 12개 추천 상품 end -->
+
+    </div>
+  </div>
+</section>
+
+
+<!-- section.bottom-banner -->
+<section class="bottom-banner">
+  <div class="overlay"></div>
+  <div class="bottom-wrap">
+    <h2>WELL FOOD ONE BAKERY</h2>
+    <h1><span>빵</span>으로 <span>고객</span>과 <span>가족</span>의 <span>행복</span>을 빚는다</h1>
+  </div>
+</section>
 {% endblock content %}
+
+{% block extrascripts %}
+<script>
+  $('.slide-banner').slick({
+		dots: false,
+		infinite: true,
+		speed: 800,
+		slidesToShow: 1,
+		adaptiveHeight: true,
+		autoplay: true,
+		autoplaySpeed: 5000,
+		prevArrow: "<span style='display:none;'>",
+		nextArrow: "<span style='display:none;'>"
+	});
+</script>
+{% endblock %}
