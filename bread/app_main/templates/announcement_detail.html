@@ -1,0 +1,79 @@
+{% extends 'common/main_base.html' %}
+
+{% load humanize %}
+
+{% block extraheads %}
+<link rel="stylesheet" href="/static/css/notice.css">
+{% endblock extraheads %}
+
+{% block content %}
+
+{% include "common/sub_banner.html" %}
+
+<!-- section.notice -->
+<section class="notice notice-detail">
+  <div class="max-1200">
+    <div class="notice-wrap">
+      <h3>공지사항</h3>
+      <div class="notice-table">
+        <div class="table-header--detail">
+          <p>[오레오케이크 데코레이션 일시변경안내]</p>
+          <p>
+            웰푸드원 / 2022-05-02 13:18:06 / 16
+          </p>
+        </div>
+
+        <div class="table-content--detail">
+          <p>[오레오케이크 데코레이션 일시변경안내]
+
+
+
+            오레오케이크에  데코 되어있는 미니오레오가 
+            
+            수입이 어려운 관계로 
+            
+            한시적으로 데코레이션이 변경되는점 양해부탁드립니다.
+            
+            
+            
+            2022년 5월 2일 월요일 출고건 부터 적용됩니다.
+            
+            
+            
+            항상 건강하시고 사장님들의
+            카페 사업장에 건승을 기원합니다.
+            
+            
+            
+            신진제과는 더욱 좋은 제품으로 최선의 노력을 다하겠습니다  감사합니다.
+            
+            자세한 사항은 신진제과 홈페이지 참조
+            
+            
+            고객센터 T. 1522-5399
+            E-Mail. ok@shinjinbakery.com
+            
+            </p>
+        </div>
+
+        <a href="/inquiry" class="btn-list">목록</a>
+
+        <div class="next-notice" onclick="location.href=''">
+          <div class="next-wrap">
+            <span class="material-symbols-outlined">arrow_drop_down</span>
+            <span>다음글</span>
+          </div>
+          <p>[소금빵(시오빵) 수량 변경]</p>
+        </div>
+      
+        <!-- pagination 위치 start -->
+        {# {% include 'paginator.html' %} #}
+        <!-- pagination 위치 end -->
+    </div>
+  </div>
+</section>
+
+{% endblock content %}
+
+{% block extrascripts %}
+{% endblock %}

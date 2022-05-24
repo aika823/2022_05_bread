@@ -1,0 +1,114 @@
+{% extends 'common/main_base.html' %}
+
+{% block extraheads %}
+<link rel="stylesheet" href="/static/css/signup.css">
+<link rel="stylesheet" href="/static/css/mypage.css">
+<link rel="stylesheet" href="/static/css/notice.css">
+{% endblock extraheads %}
+
+{% block content %}
+
+{% include "common/sub_banner.html" %}
+
+<!-- section.signup -->
+<section class="signup mypage">
+  <div class="max-1200">
+
+    {% include "mypage/mypage_nav.html" %}
+
+    <!-- section.notice -->
+    <section class="notice delivery">
+      <div class="max-1200">
+        <div class="notice-wrap">
+          <h3>배송조회</h3>
+          <div class="notice-table">
+            <div class="table-header">
+              <p>번호</p>
+              <p>상품명</p>
+              <p>주문일</p>
+              <p>택배사</p>
+              <p>송장번호</p>
+              <p>배송상태</p>
+            </div>
+
+            <!-- table 반목문 start -->
+            <div class="table-row nothing">
+              <p>주문내역이 없습니다.</p>
+            </div>
+            <div class="table-row">
+              <p>1</p>
+              <p>
+                <a href="javascript:void(0)" class="product-delivery">
+                  빵1
+                </a>
+              </p>
+              <p>2022.05.13</p>
+              <p>CJ택배</p>
+              <p>QWER1234</p>
+              <p>배송중</p>
+            </div>
+            <div class="table-row">
+              <p>2</p>
+              <p>
+                <a href="javascript:void(0)l" class="product-delivery">
+                  케이크1
+                </a>
+              </p>
+              <p>2022.05.13</p>
+              <p>CJ택배</p>
+              <p>QWER4321</p>
+              <p>배송완료</p>
+            </div>
+          </div>
+          <!-- table 반목문 end -->
+
+          
+          <!-- pagination 위치 start -->
+          {# {% include 'paginator.html' %} #}
+          <!-- pagination 위치 end -->
+        </div>
+      </div>
+    </section>
+
+    <!-- section.delivery-status -->
+    <section class="notice delivery-status">
+      <div class="max-1200">
+        <div class="notice-wrap">
+          <div class="notice-table">
+            <div class="table-header">
+              <p>시간</p>
+              <p>현재위치</p>
+              <p>배송상태</p>
+            </div>
+
+            <!-- table 반목문 start -->
+            <div class="table-row nothing">
+              <p>주문내역을 선택해주세요.</p>
+            </div>
+            <div class="table-row">
+              <p>2022.05.22.19:22</p>
+              <p>곤지암hub</p>
+              <p>배송출고(배송중)</p>
+            </div>
+            <div class="table-row">
+              <p>2022.05.22.19:22</p>
+              <p>곤지암hub</p>
+              <p>배송출고(배송중)</p>
+            </div>
+          </div>
+          <!-- table 반목문 end -->
+
+          
+          <!-- pagination 위치 start -->
+          {# {% include 'paginator.html' %} #}
+          <!-- pagination 위치 end -->
+        </div>
+      </div>
+    </section>
+
+</section>
+
+{% endblock content %}
+
+{% block extrascripts %}
+{% endblock %}

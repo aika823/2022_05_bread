@@ -1,0 +1,99 @@
+/* section.notice */
+section.notice {
+  padding: 120px 20px 170px;
+  box-sizing: border-box;
+}
+section.notice h3 {
+  font-size: 23px;
+  margin-bottom: 25px;
+}
+section.notice .notice-table {
+  border-top: 2px solid #FFEC93;
+  margin: 17px auto 34px;
+}
+section.notice .notice-table .table-header,
+section.notice .notice-table .table-row {
+  border-bottom: 1px solid #E5E5E5;
+  display: grid;
+  grid-template-columns: 1fr 650px 1fr 1fr 1fr;
+  align-items: center;
+  justify-items: center;
+}
+/* inquiry.html */
+section.notice .notice-table.notice-table--inquiry .table-header,
+section.notice .notice-table.notice-table--inquiry .table-row {
+  grid-template-columns: 1fr 650px 1fr 1fr;
+}
+section.notice .notice-table .table-header p,
+section.notice .notice-table .table-row p {
+  padding: 17px 0;
+  box-sizing: border-box;
+  width: 100%;
+  text-align: center;
+  color: #000000CC;
+}
+section.notice .notice-table .table-row p:nth-child(2) {
+  text-align: left;
+}
+section.notice .notice-table .table-header p {
+  font-weight: 700;
+}
+section.notice .notice-table .table-row.nothing {
+  grid-template-columns: 100%;
+  color: #00000080;
+}
+section.notice .notice-table .table-row p a {
+  color: #000000CC;
+}
+
+
+/* section.notice-detail */
+section.notice-detail .notice-table .table-header--detail {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 25px;
+  box-sizing: border-box;
+  border-bottom: 1px solid #E5E5E5;
+}
+section.notice-detail .notice-table .table-content--detail {
+  padding: 20px 25px;
+  box-sizing: border-box;
+  border-bottom: 1px solid #E5E5E5;
+}
+section.notice-detail .notice-table .table-content--detail p {
+  white-space: pre-line;
+}
+
+section.notice-detail .btn-list {
+  padding: 10px 60px;
+  box-sizing: border-box;
+  font-size: 20px;
+  color: #fff;
+  background-color: #E12323;
+  display: block;
+  text-align: center;
+  margin: 60px auto 120px;
+  width: fit-content;
+}
+
+section.notice-detail .next-notice {
+  display: grid;
+  grid-template-columns: 120px 1fr;
+  align-items: center;
+  border-top: 1px solid #E5E5E5;
+  border-bottom: 1px solid #E5E5E5;
+}
+section.notice-detail .next-notice .next-wrap {
+  padding: 20px 0;
+  text-align: center;
+  font-size: 16px;
+  border-right: 1px solid #E5E5E5;
+  display: flex;
+  align-items: center;
+}
+section.notice-detail .next-notice p {
+  font-size: 16px;
+  padding: 20px 25px;
+  box-sizing: border-box;
+}

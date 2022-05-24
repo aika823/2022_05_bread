@@ -1,0 +1,78 @@
+{% extends 'common/main_base.html' %}
+
+{% block extraheads %}
+<link rel="stylesheet" href="/static/css/signup.css">
+<link rel="stylesheet" href="/static/css/mypage.css">
+<link rel="stylesheet" href="/static/css/notice.css">
+{% endblock extraheads %}
+
+{% block content %}
+
+{% include "common/sub_banner.html" %}
+
+<!-- section.signup -->
+<section class="signup mypage">
+  <div class="max-1200">
+
+    {% include "mypage/mypage_nav.html" %}
+
+    <!-- section.notice -->
+    <section class="notice order">
+      <div class="max-1200">
+        <div class="notice-wrap">
+          <h3>주문내역</h3>
+          <div class="notice-table">
+            <div class="table-header">
+              <p>번호</p>
+              <p>이미지</p>
+              <p>상품명</p>
+              <p>주문일</p>
+              <p>수량</p>
+              <p>금액</p>
+            </div>
+
+            <!-- table 반목문 start -->
+            <div class="table-row nothing">
+              <p>주문내역이 없습니다.</p>
+            </div>
+            <div class="table-row">
+              <p>1</p>
+              <div class="img-wrap" onclick="location.href='/product/detail'" style="background-image: url('/static/images/hot-sample1.png');"></div>
+              <p>
+                <a href="/product/detail">
+                  빵1
+                </a>
+              </p>
+              <p>2022.05.13</p>
+              <p>1</p>
+              <p>12,000원</p>
+            </div>
+            <div class="table-row">
+              <p>2</p>
+              <div class="img-wrap" onclick="location.href='/product/detail'" style="background-image: url('/static/images/hot-sample2.png');"></div>
+              <p>
+                <a href="/product/detail">
+                  케이크1
+                </a>
+              </p>
+              <p>2022.05.13</p>
+              <p>2</p>
+              <p>25,000원</p>
+            </div>
+          </div>
+          <!-- table 반목문 end -->
+
+          
+          <!-- pagination 위치 start -->
+          {# {% include 'paginator.html' %} #}
+          <!-- pagination 위치 end -->
+        </div>
+      </div>
+    </section>
+
+</section>
+
+{% endblock content %}
+
+{% block extrascripts %}
+{% endblock %}

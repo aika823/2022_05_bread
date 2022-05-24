@@ -1,0 +1,98 @@
+{% extends 'common/main_base.html' %}
+
+{% block extraheads %}
+<link rel="stylesheet" href="/static/css/signup.css">
+<link rel="stylesheet" href="/static/css/mypage.css">
+{% endblock extraheads %}
+
+{% block content %}
+
+{% include "common/sub_banner.html" %}
+
+<!-- section.signup -->
+<section class="signup mypage">
+  <div class="max-1200">
+
+    {% include "mypage/mypage_nav.html" %}
+
+    <form action="">
+      <div class="signup-wrap">
+        <h3>회원정보 입력</h3>
+        <div class="form-wrap">
+          <div class="form-row">
+            <p class="form-name">이름</p>
+            <div class="input-wrap">
+              <input type="text" value="사용자 이름" readonly/>
+            </div>
+          </div>
+          <div class="form-row">
+            <p class="form-name">아이디</p>
+            <div class="input-wrap">
+              <input type="text" pattern="^[a-z0-9]+$" minlength="4" maxlength=16 value="기존 아이디" readonly/>
+            </div>
+          </div>
+          <div class="form-row">
+            <p class="form-name">비밀번호</p>
+            <div class="input-wrap">
+              <input type="password" pattern="^(?=.*[A-Z])(?=.*[a-z])(?=.*[0-9])(?=.*[!@#$%^&*()_-+=[]{}~?:;`|/]).{6,50}$" minlength="10" maxlength=16 required/>
+              <span>(영문 대소문자/숫자/특수문자 조합, 10자~16자)</span>
+            </div>
+          </div>
+          <div class="form-row">
+            <p class="form-name">비밀번호 변경</p>
+            <div class="input-wrap">
+              <input type="password" pattern="^(?=.*[A-Z])(?=.*[a-z])(?=.*[0-9])(?=.*[!@#$%^&*()_-+=[]{}~?:;`|/]).{6,50}$" minlength="10" maxlength=16 required/>
+            </div>
+          </div>
+          <div class="form-row">
+            <p class="form-name">이메일</p>
+            <div class="input-wrap">
+              <input type="email" value="기존 아이디" readonly/>
+            </div>
+          </div>
+          <div class="form-row">
+            <p class="form-name">연락처</p>
+            <div class="input-wrap input-contact">
+              <input type="text" pattern="[0-9]+" maxlength="4" value="01012341234" readonly/>
+            </div>
+          </div>
+          <div class="form-row">
+            <p class="form-name">매장 연락처</p>
+            <div class="input-wrap input-contact">
+              <input type="text" pattern="[0-9]+" maxlength="4" value="01012341234" readonly/>
+            </div>
+          </div>
+          <div class="form-row">
+            <p class="form-name">주소</p>
+            <div class="address-wrap">
+              <div class="input-wrap">
+                <input type="text" value="기존 우편번호" readonly required/>
+                <a href="javascript:void(0)">우편번호</a>
+              </div>
+              <div class="input-wrap">
+                <input type="text" value="기존 주소" readonly required/>
+                <span>기본주소</span>
+              </div>
+              <div class="input-wrap">
+                <input type="text" value="기존 상세주소" required/>
+                <span>나머지주소</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="btn-group">
+        <button class="btn-submit">수정하기</button>
+        <button onclick="location.href='/'">취소하기</button>
+      </div>
+    </form>
+
+  </div>
+</section>
+
+{% endblock content %}
+
+{% block extrascripts %}
+{% endblock %}

@@ -1,0 +1,67 @@
+{% extends 'common/main_base.html' %}
+
+{% load humanize %}
+
+{% block extraheads %}
+<link rel="stylesheet" href="/static/css/notice.css">
+{% endblock extraheads %}
+
+{% block content %}
+
+{% include "common/sub_banner.html" %}
+
+<!-- section.notice -->
+<section class="notice">
+  <div class="max-1200">
+    <div class="notice-wrap">
+      <h3>공지사항</h3>
+      <div class="notice-table">
+        <div class="table-header">
+          <p>번호</p>
+          <p>제목</p>
+          <p>이름</p>
+          <p>날짜</p>
+          <p>조회수</p>
+        </div>
+
+        <!-- table 반목문 start -->
+        <div class="table-row nothing">
+          <p>공지사항이 없습니다.</p>
+        </div>
+        <div class="table-row">
+          <p>1</p>
+          <p>
+            <a href="/announcement_detail">
+              [오레오케이크 데코레이션 일시변경안내]
+            </a>
+          </p>
+          <p>웰푸드원</p>
+          <p>2022.05.13</p>
+          <p>3</p>
+        </div>
+        <div class="table-row">
+          <p>1</p>
+          <p>
+            <a href="/announcement_detail">
+              [오레오케이크 데코레이션 일시변경안내]
+            </a>
+          </p>
+          <p>웰푸드원</p>
+          <p>2022.05.13</p>
+          <p>3</p>
+        </div>
+      </div>
+      <!-- table 반목문 end -->
+
+      
+      <!-- pagination 위치 start -->
+      {# {% include 'paginator.html' %} #}
+      <!-- pagination 위치 end -->
+    </div>
+  </div>
+</section>
+
+{% endblock content %}
+
+{% block extrascripts %}
+{% endblock %}
